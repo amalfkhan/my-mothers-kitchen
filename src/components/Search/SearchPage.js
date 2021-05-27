@@ -11,14 +11,14 @@ import SearchBar from "./SearchBar";
 const SearchPage = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState({ key: "q", value: "beef" });
 
   useEffect(() => {
     getRecipes();
   }, [query]);
 
   const getRecipes = async () => {
-    const recipes = await RecipeDataService.find(`q=${query}`);
+    const recipes = await RecipeDataService.find(query);
     setRecipes(recipes.hits);
   };
 

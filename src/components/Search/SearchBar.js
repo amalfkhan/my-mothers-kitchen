@@ -18,7 +18,7 @@ const SearchBar = ({ setSearchTerm, searchTerm, setQuery }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setQuery(searchTerm);
+    setQuery({ key: "q", value: searchTerm });
     setSearchTerm("");
   };
 

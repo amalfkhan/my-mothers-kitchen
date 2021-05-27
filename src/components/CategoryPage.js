@@ -22,10 +22,13 @@ const CategoryPage = (props) => {
 
   useEffect(() => {
     getRecipes();
-  }, [category]);
+  }, [queries]);
 
   const getRecipes = async () => {
-    const recipes = await RecipeDataService.find(`${category}=${value}`);
+    const recipes = await RecipeDataService.find({
+      key: category,
+      value: value,
+    });
     setRecipes(recipes.hits);
   };
 
