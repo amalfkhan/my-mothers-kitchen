@@ -1,6 +1,6 @@
 # My Mother's Kitchen
 
-A collection of my Mother's old and new recipes. (Mostly the Pakistani ones as those are stored in her head and I need documentation of them)
+A collection of my Mother's old and new recipes (mostly the Pakistani ones because they are stored in her head and I need documentation of them)
 
 ## Project Status
 
@@ -14,7 +14,7 @@ This project is a work in progress. I am currrently building the frontend pages 
 
 ## Installation and Setup
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+Clone down this repository. You will need `npm` installed globally on your machine.
 
 ### Installation:
 
@@ -28,8 +28,11 @@ npm i
 npm run start
 ```
 
-<p>&nbsp;</p>
-To Visit App: `localhost:3000/`
+### Visit Application:
+
+```sh
+localhost:3000/
+```
 
 ## Reflection
 

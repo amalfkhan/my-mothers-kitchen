@@ -7,6 +7,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
@@ -20,8 +22,10 @@ const useStyles = makeStyles({
   },
 });
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, query }) => {
   const classes = useStyles();
+  const pathArray = recipe.shareAs.split("/");
+  const identifier = pathArray[pathArray.indexOf("recipe") + 1];
 
   return (
     <Grid item xs={12} md={6}>
@@ -41,9 +45,14 @@ const RecipeCard = ({ recipe }) => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </Typography>
-              <Typography variant="subtitle1" color="primary">
-                View recipe
-              </Typography>
+              <Button
+                component={Link}
+                to={`/recipe/${identifier}`}
+                color="inherit"
+                size="small"
+              >
+                View Recipe
+              </Button>
             </CardContent>
           </div>
           <Hidden xsDown>

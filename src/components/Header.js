@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
+import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -25,16 +26,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: "Breakfast", url: "#" },
-  { title: "Appetizers", url: "#" },
-  { title: "Salad", url: "#" },
-  { title: "Lunch", url: "#" },
-  { title: "Soups", url: "#" },
-  { title: "Dinner", url: "#" },
-  { title: "Dessert", url: "#" },
-  { title: "Chicken", url: "#" },
-  { title: "Beef", url: "#" },
-  { title: "Vegetarian", url: "#" },
+  { title: "salad", url: "/category?dishType=salad" },
+  { title: "lunch", url: "/category?mealType=lunch" },
+  { title: "dinner", url: "/category?mealType=dinner" },
+  { title: "soups", url: "/category?dishType=soup" },
+  { title: "middle eastern", url: "/category?cuisineType=middle-eastern" },
+  { title: "south asian", url: "/category?cuisineType=indian" },
+  { title: "western", url: "/category?cuisineType=american" },
+  { title: "chicken", url: "/category?q=chicken" },
+  { title: "beef", url: "/category?q=beef" },
+  { title: "vegetarian", url: "/category?health=vegetarian" },
 ];
 
 const Header = () => {
@@ -43,7 +44,15 @@ const Header = () => {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button size="small">Home</Button>
+        <Button
+          component={Link}
+          to={"/search"}
+          color="inherit"
+          size="small"
+          endIcon={<SearchIcon />}
+        >
+          Search
+        </Button>
         <Typography
           component="h2"
           variant="h5"
@@ -63,17 +72,17 @@ const Header = () => {
         variant="dense"
         className={classes.toolbarSecondary}
       >
-        {sections.map((section) => (
-          <Link
+        {sections.map((section, index) => (
+          <Button
+            component={Link}
+            to={section.url}
             color="inherit"
             noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
+            key={index}
             className={classes.toolbarLink}
           >
             {section.title}
-          </Link>
+          </Button>
         ))}
       </Toolbar>
     </React.Fragment>
