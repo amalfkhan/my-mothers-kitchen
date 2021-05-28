@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5, 10),
   },
   image: {
-    // marginLeft: theme.spacing(2),
     height: 400,
   },
   estimates: {

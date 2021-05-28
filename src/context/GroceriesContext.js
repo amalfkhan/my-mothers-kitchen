@@ -9,10 +9,11 @@ const GroceriesContextProvider = (props) => {
     pickles: ["sourkraut", "burgers"],
     lettuce: ["pecan salad", "sandwich"],
     seranos: ["chicken saalan", "haleem"],
+    chicken: ["korma", "parmasean chicken"],
   });
 
   return (
-    <GroceriesContext.Provider value={{ groceries, setGroceries }}>
+    <GroceriesContext.Provider value={[groceries, setGroceries]}>
       {props.children}
     </GroceriesContext.Provider>
   );
