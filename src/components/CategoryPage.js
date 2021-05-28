@@ -22,7 +22,7 @@ const CategoryPage = (props) => {
 
   useEffect(() => {
     getRecipes();
-  }, [queries]);
+  }, [value]);
 
   const getRecipes = async () => {
     const recipes = await RecipeDataService.find({
