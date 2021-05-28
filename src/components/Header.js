@@ -67,7 +67,15 @@ const Header = () => {
           </Link>
         </Typography>
 
-        <Button variant="outlined" size="small">
+        <Button
+          component={Link}
+          to={"/groceries"}
+          variant="outlined"
+          size="small"
+        >
+          Groceries
+        </Button>
+        <Button component={Link} to={"/admin"} variant="outlined" size="small">
           Admin
         </Button>
       </Toolbar>

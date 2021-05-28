@@ -1,38 +1,14 @@
-//router for page rendering
+// entry point to app globally providing access to recipes saved to the grocery list
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-import Header from "./components/Header";
-import HomePage from "./components/Home/HomePage";
-import SearchPage from "./components/Search/SearchPage";
-import RecipePage from "./components/Recipe/RecipePage";
-import CategoryPage from "./components/CategoryPage";
+import React from "react";
+import Router from "./Router";
+import { GroceriesContextProvider } from "./context/GroceriesContext";
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-            <Route path="/recipe/:id">
-              <RecipePage />
-            </Route>
-            <Route path="/search">
-              <SearchPage />
-            </Route>
-            <Route
-              path="/category"
-              render={(props) => <CategoryPage {...props} />}
-            />
-            <Route />
-          </Switch>
-        </div>
-      </div>
-    </Router>
+    <GroceriesContextProvider>
+      <Router />
+    </GroceriesContextProvider>
   );
 };
 
