@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -8,9 +9,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   maxWidth: 345,
-  // },
   media: {
     height: 140,
   },
@@ -40,7 +38,9 @@ const Feature = ({ category }) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.button}>
-        <Button size="small">View recipes</Button>
+        <Button component={Link} to={category.url}>
+          View Recipes
+        </Button>
       </CardActions>
     </Card>
   );
