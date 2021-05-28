@@ -53,6 +53,7 @@ const Header = () => {
         >
           Search
         </Button>
+
         <Typography
           component="h2"
           variant="h5"
@@ -61,8 +62,11 @@ const Header = () => {
           noWrap
           className={classes.toolbarTitle}
         >
-          My Mother's Kitchen
+          <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
+            My Mother's Kitchen
+          </Link>
         </Typography>
+
         <Button variant="outlined" size="small">
           Admin
         </Button>

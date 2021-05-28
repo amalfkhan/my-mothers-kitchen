@@ -3,8 +3,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
+import HomePage from "./components/Home/HomePage";
 import SearchPage from "./components/Search/SearchPage";
 import RecipePage from "./components/Recipe/RecipePage";
 import CategoryPage from "./components/CategoryPage";
@@ -17,7 +16,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home />
+              <HomePage />
             </Route>
             <Route path="/recipe/:id">
               <RecipePage />
@@ -32,7 +31,6 @@ const App = () => {
             <Route />
           </Switch>
         </div>
-        <Footer />
       </div>
     </Router>
   );

@@ -23,10 +23,11 @@ const SearchBar = ({ setSearchTerm, searchTerm, setQuery }) => {
   };
 
   return (
-    <form className={classes.formContainer} noValidate>
+    <form className={classes.formContainer} noValidate onSubmit={handleSubmit}>
       <Grid container alignItems="center" spacing={3}>
         <Grid item xs={11}>
           <TextField
+            variant="filled"
             fullWidth
             label="Find a recipe"
             variant="outlined"
@@ -36,7 +37,7 @@ const SearchBar = ({ setSearchTerm, searchTerm, setQuery }) => {
           />
         </Grid>
         <Grid item xs={1}>
-          <IconButton onClick={handleSubmit}>
+          <IconButton type="submit">
             <SearchIcon />
           </IconButton>
         </Grid>

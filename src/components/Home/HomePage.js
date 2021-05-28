@@ -5,15 +5,20 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
-  mainFeaturedPost: {
+  titleBackground: {
     position: "relative",
-    backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
     backgroundImage: "url(https://source.unsplash.com/random)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+    height: "70vh",
+    alignItems: "center",
+  },
+  titleContainer: {
+    justifyContent: "center",
+    textAlign: "center",
   },
   overlay: {
     position: "absolute",
@@ -23,34 +28,21 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: "rgba(0,0,0,.3)",
   },
-  mainFeaturedPostContent: {
+  title: {
     position: "relative",
-    padding: theme.spacing(3),
-    [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
+    padding: theme.spacing(25, 0),
   },
 }));
 
-const Home = () => {
+const HomePage = () => {
   const classes = useStyles();
 
   return (
-    <Paper
-      className={classes.mainFeaturedPost}
-      style={{ backgroundImage: `url(https://source.unsplash.com/random)` }}
-    >
-      {
-        <img
-          style={{ display: "none" }}
-          src="https://source.unsplash.com/random"
-        />
-      }
+    <Paper className={classes.titleBackground}>
       <div className={classes.overlay} />
-      <Grid container>
+      <Grid container className={classes.titleContainer}>
         <Grid item md={6}>
-          <div className={classes.mainFeaturedPostContent}>
+          <div className={classes.title}>
             <Typography
               component="h1"
               variant="h3"
@@ -66,8 +58,10 @@ const Home = () => {
           </div>
         </Grid>
       </Grid>
+
+      <Grid></Grid>
     </Paper>
   );
 };
 
-export default Home;
+export default HomePage;

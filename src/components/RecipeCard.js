@@ -10,26 +10,28 @@ import Hidden from "@material-ui/core/Hidden";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
   },
   cardDetails: {
     flex: 1,
+    padding: theme.spacing(3),
   },
   cardMedia: {
     width: 160,
   },
-});
+}));
 
 const RecipeCard = ({ recipe, query }) => {
   const classes = useStyles();
   const pathArray = recipe.shareAs.split("/");
   const identifier = pathArray[pathArray.indexOf("recipe") + 1];
+  console.log(identifier);
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href="#">
+      <CardActionArea component={Link} to={`/recipe/${identifier}`}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
