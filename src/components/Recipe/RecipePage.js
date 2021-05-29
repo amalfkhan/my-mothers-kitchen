@@ -9,6 +9,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
+import AddButton from "../AddButton";
 
 const useStyles = makeStyles((theme) => ({
   contentContainer: {
@@ -65,14 +66,20 @@ const directions = [
 const RecipePage = () => {
   const { id } = useParams();
   const classes = useStyles();
+  const recipe = { label: "Buckwheat Pancakes" };
 
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg" className={classes.contentContainer}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
-            <Typography variant="h2">Buckwheat Pancakes</Typography>
+          <Grid container item xs={12} alignItems="center">
+            <Grid item xs={9}>
+              <Typography variant="h2">Buckwheat Pancakes</Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <AddButton recipe={{ label: "Buckwheat Pancakes" }} />
+            </Grid>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1" paragraph>
@@ -104,7 +111,7 @@ const RecipePage = () => {
           >
             <Paper className={classes.estimates} elevation={0}>
               {estimates.map((estimate) => (
-                <Grid item>
+                <Grid item key={estimate}>
                   <Typography
                     className={classes.estimatesText}
                     variant="body1"
@@ -129,8 +136,12 @@ const RecipePage = () => {
             </Grid>
             <Divider />
             <Grid item>
-              {ingredients.map((ingredient, index) => (
-                <Typography variant="body1" className={classes.recipeBodyText}>
+              {ingredients.map((ingredient) => (
+                <Typography
+                  key={ingredient}
+                  variant="body1"
+                  className={classes.recipeBodyText}
+                >
                   {ingredient}
                 </Typography>
               ))}
@@ -149,8 +160,12 @@ const RecipePage = () => {
             </Grid>
             <Divider />
             <Grid item>
-              {directions.map((direction, index) => (
-                <Typography variant="body1" className={classes.recipeBodyText}>
+              {directions.map((direction) => (
+                <Typography
+                  key={direction}
+                  variant="body1"
+                  className={classes.recipeBodyText}
+                >
                   {direction}
                 </Typography>
               ))}

@@ -1,7 +1,7 @@
 // component to render the page for a specific recipe page
 
 import React, { useContext } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -23,13 +23,6 @@ const useStyles = makeStyles({
   },
 });
 
-// const TableHead = withStyles((theme) => ({
-//   root: {
-//     backgroundColor: "orange",
-//     fontSize: "800",
-//   },
-// }))(MuiTableHead);
-
 const GroceriesTable = () => {
   const classes = useStyles();
   const [groceries, setGroceries] = useContext(GroceriesContext);
@@ -39,19 +32,17 @@ const GroceriesTable = () => {
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.header}>
           <TableRow>
-            <TableCell>ingredient</TableCell>
-            <TableCell align="left">Associated Recipes</TableCell>
+            <TableCell>Recipe</TableCell>
+            <TableCell align="left">Ingredients</TableCell>
           </TableRow>
         </TableHead>
         <TableBody className={classes.body}>
-          {Object.keys(groceries).map((ingredient) => (
-            <TableRow key={ingredient}>
+          {Object.keys(groceries).map((recipe) => (
+            <TableRow key={recipe}>
               <TableCell component="th" scope="row">
-                {ingredient}
+                {recipe}
               </TableCell>
-              <TableCell align="left">
-                {groceries[ingredient].join(", ")}
-              </TableCell>
+              <TableCell align="left">{groceries[recipe].join(", ")}</TableCell>
             </TableRow>
           ))}
         </TableBody>
