@@ -16,17 +16,17 @@ This project is a work in progress and I am temporarily using the Edamam api for
 
 Screenshots will be updated as the project progresses
 
-### Home Page:
+### Home:
 
-![Home page](https://imgur.com/DZpDOqp)
+![Home page](https://i.imgur.com/DZpDOqp.png)
 
-### Search Page:
+### Search:
 
-![Search page](https://imgur.com/f0LpvzY)
+![Search page](https://i.imgur.com/f0LpvzY.png)
 
 ### Grocery List:
 
-![Grocery list](https://imgur.com/m4FUQud)
+![Grocery list](https://i.imgur.com/m4FUQud.png)
 
 <p>&nbsp;</p>
 
