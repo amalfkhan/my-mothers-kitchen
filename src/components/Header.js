@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -26,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: "salad", url: "/category?dishType=salad" },
+  { title: "salad", url: "/category?q=salad" },
   { title: "lunch", url: "/category?mealType=lunch" },
   { title: "dinner", url: "/category?mealType=dinner" },
-  { title: "soups", url: "/category?dishType=soup" },
+  { title: "soups", url: "/category?q=soup" },
   { title: "mediterranean", url: "/category?cuisineType=mediterranean" },
   { title: "south asian", url: "/category?cuisineType=indian" },
   { title: "western", url: "/category?cuisineType=american" },
@@ -44,40 +45,60 @@ const Header = () => {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button
-          component={Link}
-          to={"/search"}
-          color="inherit"
-          size="small"
-          endIcon={<SearchIcon />}
-        >
-          Search
-        </Button>
+        <Grid container>
+          <Grid item xs={4}>
+            <Button
+              component={Link}
+              to={"/search"}
+              color="inherit"
+              size="small"
+              endIcon={<SearchIcon />}
+            >
+              Search
+            </Button>
+          </Grid>
 
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          className={classes.toolbarTitle}
-        >
-          <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
-            My Mother's Kitchen
-          </Link>
-        </Typography>
+          <Grid item xs={4}>
+            <Typography
+              component="h2"
+              variant="h5"
+              color="inherit"
+              align="center"
+              noWrap
+              className={classes.toolbarTitle}
+            >
+              <Link
+                to={"/"}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                My Mother's Kitchen
+              </Link>
+            </Typography>
+          </Grid>
 
-        <Button
-          component={Link}
-          to={"/groceries"}
-          variant="outlined"
-          size="small"
-        >
-          Groceries
-        </Button>
-        <Button component={Link} to={"/admin"} variant="outlined" size="small">
-          Admin
-        </Button>
+          <Grid container item spacing={2} xs={4} justify="flex-end">
+            <Grid item>
+              <Button
+                component={Link}
+                to={"/groceries"}
+                variant="outlined"
+                size="small"
+              >
+                Groceries
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                component={Link}
+                to={"/admin"}
+                variant="outlined"
+                size="small"
+              >
+                Admin
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
       </Toolbar>
       <Toolbar
         component="nav"

@@ -5,11 +5,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import RecipeDataService from "../services/recipe.service";
-import RecipeCard from "./RecipeCard";
+import RecipeCard from "./Recipe/RecipeCard";
 
 const useStyles = makeStyles((theme) => ({
   contentContainer: {
-    padding: theme.spacing(5, 3),
+    padding: theme.spacing(5, 8),
   },
 }));
 
@@ -35,7 +35,7 @@ const CategoryPage = (props) => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg" className={classes.contentContainer}>
+      <Container maxWidth="xl" className={classes.contentContainer}>
         <Grid container spacing={4}>
           {recipes.map((recipe, index) => (
             <RecipeCard key={index} recipe={recipe.recipe} />

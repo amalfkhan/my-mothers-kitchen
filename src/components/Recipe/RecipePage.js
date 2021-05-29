@@ -9,7 +9,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
-import AddButton from "../AddButton";
+import AddButton from "./AddButton";
 
 const useStyles = makeStyles((theme) => ({
   contentContainer: {

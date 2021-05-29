@@ -5,7 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import RecipeDataService from "../../services/recipe.service";
-import RecipeCard from "../RecipeCard";
+import RecipeCard from "../Recipe/RecipeCard";
 import SearchBar from "./SearchBar";
 
 const SearchPage = () => {
@@ -25,7 +25,7 @@ const SearchPage = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <SearchBar
           setSearchTerm={setSearchTerm}
           searchTerm={searchTerm}

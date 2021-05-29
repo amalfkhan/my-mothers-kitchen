@@ -35,7 +35,7 @@ const RecipeCard = ({ recipe, query }) => {
   const identifier = pathArray[pathArray.indexOf("recipe") + 1];
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={4}>
       <Card className={classes.card}>
         <div className={classes.cardDetails}>
           <CardContent>
@@ -47,9 +47,7 @@ const RecipeCard = ({ recipe, query }) => {
             </Typography>
             <Typography variant="subtitle1" paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
             <div className={classes.buttonContainer}>
               <Button

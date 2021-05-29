@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
-import GroceriesContext from "../context/GroceriesContext";
+import GroceriesContext from "../../context/GroceriesContext";
 
 const useStyles = makeStyles((theme) => ({
   groceryButton: {
