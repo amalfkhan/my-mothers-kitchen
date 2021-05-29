@@ -27,7 +27,8 @@ const Feature = ({ category }) => {
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image="https://source.unsplash.com/random"
+        // image={"https://source.unsplash.com/random"}
+        image={category.image}
       />
       <CardContent className={classes.content}>
         <Typography gutterBottom variant="h5" component="h2">

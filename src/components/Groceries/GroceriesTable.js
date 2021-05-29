@@ -18,6 +18,9 @@ const useStyles = makeStyles({
   header: {
     background: "#EBEDEE !important",
   },
+  headerText: {
+    fontWeight: "800",
+  },
   body: {
     background: "#EBEDEE !important",
   },
@@ -28,12 +31,16 @@ const GroceriesTable = () => {
   const [groceries, setGroceries] = useContext(GroceriesContext);
 
   return (
-    <TableContainer component={Paper} className={classes.tableContainer}>
+    <TableContainer
+      component={Paper}
+      className={classes.tableContainer}
+      elevation={0}
+    >
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.header}>
           <TableRow>
-            <TableCell>Recipe</TableCell>
-            <TableCell align="left">Ingredients</TableCell>
+            <TableCell className={classes.headerText}>Ingredients</TableCell>
+            <TableCell className={classes.headerText}>Recipes</TableCell>
           </TableRow>
         </TableHead>
         <TableBody className={classes.body}>

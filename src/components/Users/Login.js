@@ -58,7 +58,7 @@ const Login = () => {
               <TextField
                 size="small"
                 color="inherit"
-                variant="outlined"
+                // variant="outlined"
                 required
                 fullWidth
                 id="email"
@@ -79,7 +79,7 @@ const Login = () => {
             <Grid item xs={12}>
               <TextField
                 size="small"
-                variant="outlined"
+                // variant="outlined"
                 required
                 fullWidth
                 id="password"

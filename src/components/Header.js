@@ -84,7 +84,7 @@ const Header = () => {
                 variant="outlined"
                 size="small"
               >
-                Groceries
+                Grocery List
               </Button>
             </Grid>
             <Grid item>

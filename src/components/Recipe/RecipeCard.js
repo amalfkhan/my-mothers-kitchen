@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   cardMedia: {
-    width: 160,
+    width: 210,
   },
   groceryButton: {
     float: "right",
@@ -35,17 +35,17 @@ const RecipeCard = ({ recipe, query }) => {
   const identifier = pathArray[pathArray.indexOf("recipe") + 1];
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item md={12} lg={6} xl={4}>
       <Card className={classes.card}>
         <div className={classes.cardDetails}>
           <CardContent>
-            <Typography component="h2" variant="h5">
+            <Typography component="h2" variant="h6">
               {recipe.label}
             </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
+            <Typography variant="subtitle2" color="textSecondary">
               {recipe.cuisineType}
             </Typography>
-            <Typography variant="subtitle1" paragraph>
+            <Typography variant="subtitle1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
