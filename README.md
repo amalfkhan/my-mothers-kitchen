@@ -1,16 +1,34 @@
 # My Mother's Kitchen
 
-A collection of my Mother's old and new recipes (mostly the Pakistani ones because they are stored in her head and I need documentation of them)
+A collection of my Mother's recipes, most of which are only stored in her head. The motivation behind creating this was to not only have a database of her recipes, but also easily be able to generate a intuitive grocery list based on the recipes selected for a given week's mealplan.
+
+**Tools:** React/JavaScript, Node.js/Express, mongoDB/mongoose
+
+<p>&nbsp;</p>
 
 ## Project Status
 
-This project is a work in progress. I am currrently building the frontend pages and temporarily using the Edamam api for recipes. Once the frontend is complete I will create my own api and set up a database so I can display my own recipe data.
+This project is a work in progress and I am temporarily using the Edamam api for recipe data. As I build the server and database I will integrate functionalities.
+
+<p>&nbsp;</p>
 
 ## Project Screen Shots
 
-### Page 1:
+Screenshots will be updated as the project progresses
 
-[ To be added on page completion ]
+### Home Page:
+
+![Home page](https://imgur.com/DZpDOqp)
+
+### Search Page:
+
+![Search page](https://imgur.com/f0LpvzY)
+
+### Grocery List:
+
+![Grocery list](https://imgur.com/m4FUQud)
+
+<p>&nbsp;</p>
 
 ## Installation and Setup
 
@@ -33,6 +51,8 @@ npm run start
 ```sh
 localhost:3000/
 ```
+
+<p>&nbsp;</p>
 
 ## Reflection
 
