@@ -1,3 +1,5 @@
+![Home page](https://i.imgur.com/DZpDOqp.png)
+
 # My Mother's Kitchen
 
 A collection of my Mother's recipes, most of which are only stored in her head. The motivation behind creating this was to not only have a database of her recipes, but also easily be able to generate a intuitive grocery list based on the recipes selected for a given week's mealplan.
@@ -15,10 +17,6 @@ This project is a work in progress and I am temporarily using the Edamam api for
 ## Project Screen Shots
 
 Screenshots will be updated as the project progresses
-
-### Home:
-
-![Home page](https://i.imgur.com/DZpDOqp.png)
 
 ### Search:
 

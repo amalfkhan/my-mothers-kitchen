@@ -10,7 +10,7 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
   },
   toolbarTitle: {
     flex: 1,
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   toolbarSecondary: {
     justifyContent: "space-between",
     overflowX: "auto",
-    margin: theme.spacing(3, 0),
+    margin: theme.spacing(2, 0),
   },
   toolbarLink: {
     padding: theme.spacing(1),
